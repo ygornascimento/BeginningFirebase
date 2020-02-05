@@ -1,0 +1,21 @@
+use_frameworks!
+
+target 'Grocr' do
+platform :ios, '13.1'
+
+pod 'Firebase/Analytics'
+pod 'FirebaseUI'
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'Firebase/Functions'
+pod 'Firebase/Messaging'
+pod 'Firebase/Storage'
+pod 'Fabric'
+pod 'Crashlytics'
+pod 'Firebase/DynamicLinks'
+pod 'Firebase/InAppMessaging'
+pod 'Firebase/Database'
+pod 'Firebase/Performance'
+pod 'Firebase/RemoteConfig'
+
+end
