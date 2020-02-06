@@ -21,6 +21,7 @@
  */
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
   
@@ -30,6 +31,18 @@ class LoginViewController: UIViewController {
   // MARK: Outlets
   @IBOutlet weak var textFieldLoginEmail: UITextField!
   @IBOutlet weak var textFieldLoginPassword: UITextField!
+  
+  override func viewDidLoad() {
+    let rootRef = Database.database().reference()
+    let childRef = Database.database().reference(withPath: "grocery-items")
+    let itemsRef = rootRef.child("grocery-items")
+    let milkRef = itemsRef.child("milk")
+    
+    print(rootRef.key)
+    print(childRef.key)
+    print(itemsRef.key)
+    print(milkRef.key)
+  }
   
   // MARK: Actions
   @IBAction func loginDidTouch(_ sender: AnyObject) {
